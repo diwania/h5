@@ -1,0 +1,538 @@
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+  <style>
+    :root {
+      --alpha_brand_alpha_10: rgba(114,20,255,0.102);
+      --alpha_brand_alpha_20: rgba(114,20,255,0.200);
+      --alpha_brand_alpha_40: rgba(114,20,255,0.400)	;
+      --alpha_neutral_alpha_10: rgba(0,0,0,0.102)	;
+      --alpha_neutral_alpha_20: rgba(0,0,0,0.200)	;
+      --alpha_neutral_alpha_4: rgba(0,0,0,0.039)	;
+      --base_badge: #FF524D;
+      --base_bg_actionsheet: #FFFFFF;
+      --base_bg_bottom: #FFFFFF;
+      --base_bg_card: #FFFFFF;
+      --base_bg_card_secondary: #F5F7FA;
+      --base_bg_chips: #F5F7FA;
+      --base_bg_chips_selected: rgba(114,20,255,0.149)	;
+      --base_bg_controller: #FFFFFF;
+      --base_bg_default: #FFFFFF;
+      --base_bg_dialog: #FFFFFF;
+      --base_bg_edit: #F5F7FA;
+      --base_bg_head: #8E73FF;
+      --base_bg_label_location: #B8BECC;
+      --base_bg_loading_blackpop: rgba(0,0,0,0.549)	;
+      --base_bg_loading_whitepop: #F5F7FA;
+      --base_bg_navbar: #FFFFFF;
+      --base_bg_navbar_secondary: #FFFFFF;
+      --base_bg_panel: #FFFFFF;
+      --base_bg_pop_black: rgba(0,0,0,0.898);
+      --base_bg_pop_white: #FFFFFF;
+      --base_bg_primary: #F5F7FA;
+      --base_bg_primary_01: #F5F7FA;
+      --base_bg_secondary: #FFFFFF;
+      --base_bg_tabbar: #FFFFFF;
+      --base_bg_tag_01: #E6F6FF;
+      --base_bg_tag_02: #EBEFFF;
+      --base_bg_tag_03: #FEEFEF;
+      --base_bg_tag_04: #E7FAF3;
+      --base_bg_tag_05: #FFF6E8;
+      --base_bg_tag_06: #EAE5FF;
+      --base_bg_tertiary: #F5F7FA;
+      --base_bg_toast: rgba(0,0,0,0.800);
+      --base_bg_toolbar: #FFFFFF;
+      --base_brand: #7214FF;
+      --base_color_01: #0BA7FF;
+      --base_color_02: #4D70FF;
+      --base_color_03: #FF524D;
+      --base_color_04: #0DC37E;
+      --base_color_05: #FA9E00;
+      --base_gender_female: #F996E6;
+      --base_gender_male: #9EC9FD;
+      --base_gender_none: #D2D8E5;
+      --base_line_default: rgba(0, 0, 0, 0.039);
+      --base_line_divider: rgba(0, 0, 0, 0.039);
+      --base_load: rgba(0, 0, 0, 0.039);
+      --base_mask_default: rgba(0,0,0,0.400);
+      --base_press: rgba(0, 0, 0, 0.039);
+      --button_t_btn_dis: #D2D8E5;
+      --button_t_btn_primary_filled: #FFFFFF;
+      --button_t_btn_secondary_filled: #FFFFFF;
+      --button_t_btn_tertiary_filled: #7214FF;
+      --button_primary_filled_dis: #EAE5FF;
+      --button_primary_filled_dis_02: #F5F7FA;
+      --button_primary_filled_nor: #7214FF;
+      --button_primary_stroke_dis: rgba(0, 0, 0, 0.039);
+      --button_primary_stroke_nor: rgba(114,20,255,0.302);
+      --button_secondary_filled_dis: #EAE5FF;
+      --button_secondary_filled_nor: #7214FF;
+      --button_secondary_stroke_nor: rgba(0, 0, 0, 0.039);
+      --button_tertiary_filled_nor: rgba(114,20,255,0.102);
+      --button_tertiary_filled_nor_02: rgba(114,20,255,0.102);
+      --button_white_filled_nor_01: #FFFFFF;
+      --button_white_filled_nor_02: #FFFFFF;
+      --button_white_filled_nor_03: #FFFFFF;
+      --im_bg_chat: #F5F7FA;
+      --im_bg_general_notice: #E9ECF2;
+      --im_bg_notice: #EBEFFF;
+      --im_bg_textfield: #F5F7FA;
+      --im_bg_warning: #FEEFEF;
+      --im_chat_bg_receive: #FFFFFF;
+      --im_chat_bg_send: #33A17FFF;
+      --im_noble_chat_bg_noble_01: #F9FFFA;
+      --im_noble_chat_bg_noble_02: #F9FCFF;
+      --im_noble_chat_bg_noble_03: #FBF9FF;
+      --im_noble_chat_bg_noble_04: #FFF9FE;
+      --im_noble_chat_bg_noble_05: #FFF9F9;
+      --im_noble_chat_bg_noble_06: #FFFFF9;
+      --im_noble_text_noble_01: #3F6B51;
+      --im_noble_text_noble_01_caption: #9CB5A6;
+      --im_noble_text_noble_01_highlight: #00BA3F;
+      --im_noble_text_noble_02: #355467;
+      --im_noble_text_noble_02_caption: #97A8B3;
+      --im_noble_text_noble_02_highlight: #008BF0;
+      --im_noble_text_noble_03: #56438B;
+      --im_noble_text_noble_03_caption: #A89EC5;
+      --im_noble_text_noble_03_highlight: #883FFF;
+      --im_noble_text_noble_04: #871F83;
+      --im_noble_text_noble_04_caption: #C38CC0;
+      --im_noble_text_noble_04_highlight: #F200E9;
+      --im_noble_text_noble_05: #711717;
+      --im_noble_text_noble_05_caption: #B88888;
+      --im_noble_text_noble_05_highlight: #FF3400;
+      --im_noble_text_noble_06: #714D17;
+      --im_noble_text_noble_06_caption: #B8A688;
+      --im_noble_text_noble_06_highlight: #FF8A00;
+      --im_progress_receive_normal: rgba(114,20,255,0.200);
+      --im_progress_receive_success: #7214FF;
+      --im_progress_send_normal: rgba(114,20,255,0.200);
+      --im_progress_send_success: #7214FF;
+      --im_text_input_default: #9DA4B2;
+      --im_text_notice: #525866;
+      --im_text_receive: #272A33;
+      --im_text_send: #272A33;
+      --other_t_profile_charm: #C73EAC;
+      --other_t_profile_contribution: #D46402;
+      --other_t_profile_fans: #4652D2;
+      --other_t_profile_operate: #9DA4B2;
+      --other_bg_decoration_selected: #9980FF;
+      --other_bg_gift: rgba(255,128,178,0.200);
+      --other_color_roomteam: #00D5FF;
+      --other_giftwall_t_giftwall_lv_0: #565B74;
+      --other_giftwall_t_giftwall_lv_1: #008BAA;
+      --other_giftwall_t_giftwall_lv_2: #3A7EE3;
+      --other_giftwall_t_giftwall_lv_3: #6536C9;
+      --other_giftwall_t_giftwall_lv_4: #C41BFF;
+      --text_t_0: #000000;
+      --text_t_100: #FFFFFF;
+      --text_t_20: #272A33;
+      --text_t_40: #525866;
+      --text_t_55: #767D8C;
+      --text_t_70: #9DA4B2;
+      --text_t_90: #D2D8E5;
+      --text_t_connect: #0DC37E;
+      --text_t_disable: #D2D8E5;
+      --text_t_error: #FF524D;
+      --text_t_family_primary: #38260A;
+      --text_t_family_secondary: #99826F;
+      --text_t_highlight: #FA9E00;
+      --text_t_inroom: #9980FF;
+      --text_t_link: #7214FF;
+      --text_t_navbar: #272A33;
+      --text_t_primary: #7214FF;
+      --text_t_secondary: #7214FF;
+      --base_bg_bottom_0: rgba(255,255,255,0.000);
+      --base_bg_default_0: rgba(255,255,255,0.000);
+      --base_bg_primary_0: rgba(245,247,250,0.000);
+      --text_t_70_20: rgba(157,164,178,0.200);
+    }
+    :root.-dark{
+      --alpha_brand_alpha_10: rgba(143,113,245,0.102);
+      --alpha_brand_alpha_20: rgba(143,113,245,0.200);
+      --alpha_brand_alpha_40: rgba(143,113,245,0.400);
+      --alpha_neutral_alpha_10: rgba(255,255,255,0.102);
+      --alpha_neutral_alpha_20: rgba(255,255,255,0.200);
+      --alpha_neutral_alpha_4: rgba(255,255,255,0.078);
+      --base_badge: #E05A55;
+      --base_bg_actionsheet: #1E2021;
+      --base_bg_bottom: #121314;
+      --base_bg_card: #1E2021;
+      --base_bg_card_secondary: #292C2E;
+      --base_bg_chips: rgba(219,237,255,0.078);
+      --base_bg_chips_selected: rgba(124,98,209,0.302);
+      --base_bg_controller: #292C2E;
+      --base_bg_default: #121314;
+      --base_bg_dialog: #35383B;
+      --base_bg_edit: #292C2E;
+      --base_bg_head: #463380;
+      --base_bg_label_location: #7A7F85;
+      --base_bg_loading_blackpop: rgba(0,0,0,0.549);
+      --base_bg_loading_whitepop: #292C2E;
+      --base_bg_navbar: #1E2021;
+      --base_bg_navbar_secondary: #121314;
+      --base_bg_panel: #1E2021;
+      --base_bg_pop_black: #5E6266;
+      --base_bg_pop_white: #5E6266;
+      --base_bg_primary: #121314;
+      --base_bg_primary_01: #121314;
+      --base_bg_secondary: #1E2021;
+      --base_bg_tabbar: #292C2E;
+      --base_bg_tag_01: #283F4D;
+      --base_bg_tag_02: #2B3457;
+      --base_bg_tag_03: #4D302F;
+      --base_bg_tag_04: #284238;
+      --base_bg_tag_05: #4D3E29;
+      --base_bg_tag_06: #352B57;
+      --base_bg_tertiary: #292C2E;
+      --base_bg_toast: rgba(94,98,102,0.800);
+      --base_bg_toolbar: #1E2021;
+      --base_brand: #8F71F5;
+      --base_color_01: #2B9AD9;
+      --base_color_02: #5571E0;
+      --base_color_03: #E05A55;
+      --base_color_04: #21A673;
+      --base_color_05: #D99E45;
+      --base_gender_female: #C27CB4;
+      --base_gender_male: #7B9DC7;
+      --base_gender_none: #5E6266;
+      --base_line_default: rgba(255,255,255,0.039);
+      --base_line_divider: rgba(0,0,0,0.200);
+      --base_load: rgba(255,255,255,0.059);
+      --base_mask_default: rgba(0,0,0,0.600);
+      --base_press: rgba(255,255,255,0.059);
+      --button_t_btn_dis: #5E6266;
+      --button_t_btn_primary_filled: #FFFFFF;
+      --button_t_btn_secondary_filled: #FFFFFF;
+      --button_t_btn_tertiary_filled: #8F71F5;
+      --button_primary_filled_dis: #3E3952;
+      --button_primary_filled_dis_02: #292C2E;
+      --button_primary_filled_nor: #7C62D1;
+      --button_primary_stroke_dis: rgba(255,255,255,0.102);
+      --button_primary_stroke_nor: rgba(146,115,250,0.302);
+      --button_secondary_filled_dis: #3E3952;
+      --button_secondary_filled_nor: #8F71F5;
+      --button_secondary_stroke_nor: rgba(255,255,255,0.102);
+      --button_tertiary_filled_nor: rgba(124,98,209,0.200);
+      --button_tertiary_filled_nor_02: rgba(124,98,209,0.200);
+      --button_white_filled_nor_01: #3E3952;
+      --button_white_filled_nor_02: rgba(255,255,255,0.800);
+      --button_white_filled_nor_03: rgba(255,255,255,0.102);
+      --im_bg_chat: #121314;
+      --im_bg_general_notice: #1E2021;
+      --im_bg_notice: #2B3457;
+      --im_bg_textfield: #292C2E;
+      --im_bg_warning: #4D302F;
+      --im_chat_bg_receive: #292C2E;
+      --im_chat_bg_send: #33A17FFF;
+      --im_noble_chat_bg_noble_01: #161A17;
+      --im_noble_chat_bg_noble_02: #16181A;
+      --im_noble_chat_bg_noble_03: #17161A;
+      --im_noble_chat_bg_noble_04: #1A1619;
+      --im_noble_chat_bg_noble_05: #1A1616;
+      --im_noble_chat_bg_noble_06: #1A1816;
+      --im_noble_text_noble_01: #99BDA7;
+      --im_noble_text_noble_01_caption: #657B6D;
+      --im_noble_text_noble_01_highlight: #6BD897;
+      --im_noble_text_noble_02: #97B5C7;
+      --im_noble_text_noble_02_caption: #637681;
+      --im_noble_text_noble_02_highlight: #50B2EF;
+      --im_noble_text_noble_03: #B3A8D2;
+      --im_noble_text_noble_03_caption: #756E88;
+      --im_noble_text_noble_03_highlight: #B689FF;
+      --im_noble_text_noble_04: #C4A2C3;
+      --im_noble_text_noble_04_caption: #806A7F;
+      --im_noble_text_noble_04_highlight: #F271EE;
+      --im_noble_text_noble_05: #D4A5A5;
+      --im_noble_text_noble_05_caption: #896C6C;
+      --im_noble_text_noble_05_highlight: #F97A7A;
+      --im_noble_text_noble_06: #D8BE97;
+      --im_noble_text_noble_06_caption: #8C7C63;
+      --im_noble_text_noble_06_highlight: #F4B14D;
+      --im_progress_receive_normal: rgba(143,113,245,0.200);
+      --im_progress_receive_success: #8F71F5;
+      --im_progress_send_normal: rgba(143,113,245,0.200);
+      --im_progress_send_success: #8F71F5;
+      --im_text_input_default: #7A7F85;
+      --im_text_notice: #BABEC2;
+      --im_text_receive: #DCDEE0;
+      --im_text_send: #DCDEE0;
+      --other_t_profile_charm: #FFB2EF;
+      --other_t_profile_contribution: #FFDD99;
+      --other_t_profile_fans: #B2C8FF;
+      --other_t_profile_operate: #7A7F85;
+      --other_bg_decoration_selected: #6551A8;
+      --other_bg_gift: rgba(143,113,245,0.102);
+      --other_color_roomteam: #04AFC2;
+      --other_giftwall_t_giftwall_lv_0: #DCDEE0;
+      --other_giftwall_t_giftwall_lv_1: #62CAD5;
+      --other_giftwall_t_giftwall_lv_2: #70A0E7;
+      --other_giftwall_t_giftwall_lv_3: #A479FF;
+      --other_giftwall_t_giftwall_lv_4: #C41BFF;
+      --text_t_0: #FFFFFF;
+      --text_t_100: #FFFFFF;
+      --text_t_20: #DCDEE0;
+      --text_t_40: #BABEC2;
+      --text_t_55: #999EA3;
+      --text_t_70: #7A7F85;
+      --text_t_90: #5E6266;
+      --text_t_connect: #21A673;
+      --text_t_disable: #5E6266;
+      --text_t_error: #E05A55;
+      --text_t_family_primary: #B29D7D;
+      --text_t_family_secondary: #8F7E64;
+      --text_t_highlight: #D99E45;
+      --text_t_inroom: #8F71F5;
+      --text_t_link: #8F71F5;
+      --text_t_navbar: #DCDEE0;
+      --text_t_primary: #8F71F5;
+      --text_t_secondary: #8F71F5;
+      --base_bg_bottom_0: rgba(18,19,20,0.000);
+      --base_bg_default_0: rgba(18,19,20,0.000);
+      --base_bg_primary_0: rgba(18,19,20,0.000);
+      --text_t_70_20: rgba(122,127,133,0.200);
+    }
+  </style>
+  <style>
+    body {background-color: var(--base_bg_default);}
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    ul, ol, li,
+    p {color: var(--text_t_20);}
+    h2::after {border-color: var(--text_t_90);}
+    a {color: var(--text_t_link);}
+    li::marker{color: var(--text_t_20);}
+  </style>
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html">
+<h1>Annex I Inappropriate Content(Diwania)</h1>
+<h4><strong>Date of Last Revision: 5th March,2025</strong></h4>
+<p>To ensure that Diwania remain safe and respectful , publishing information that is harmful or inappropriate for our users is absolutely prohibited.Details are as follows.</p>
+<h3><strong>Sexual Content and Profanity</strong></h3>
+<p>We don’t allow the act of users that contain or promote sexual content or profanity, including pornography, or any content or services intended to be sexually gratifying. We don’t allow users content that appear to promote a sexual act in exchange for compensation.</p>
+<p><strong>Here are some examples of common violations:</strong></p>
+<ul>
+<li>Depictions of sexual nudity, or sexually suggestive poses in which the subject is nude, blurred or minimally clothed, and/or where the clothing would not be acceptable in an appropriate public context.</li>
+<li>Depictions, animations or illustrations of sex acts, or sexually suggestive poses or the sexual depiction of body parts.</li>
+<li>Content that depicts or are functionally sexual aids, sex guides, illegal sexual themes and fetishes.</li>
+<li>Content that is lewd or profane - including but not limited to content which may contain profanity, slurs, explicit text, adult/sexual keywords in the store listing or in-app.</li>
+<li>Content that depicts, describes, or encourages bestiality.</li>
+<li>Apps that promote sex-related entertainment, escort services, or other services that may be interpreted as providing sexual acts in exchange for compensation, including but not limited to compensated dating or sexual arrangements where one participant is expected or implied to provide money, gifts, or financial support to another participant (“sugar dating”).</li>
+<li>Apps that degrade or objectify people, such as apps that claim to undress people or see through clothing, even if labelled as prank or entertainment apps.</li>
+</ul>
+<h3><strong>Hate Speech</strong></h3>
+<p>We don’t allow the act of users that promote violence, or incite hatred against individuals or groups based on race or ethnic origin, religion, disability, age, nationality, veteran status, sexual orientation, gender, gender identity, or any other characteristic that is associated with systemic discrimination or marginalization.</p>
+<p><strong>Here are examples of common violations:</strong></p>
+<ul>
+<li>Content or speech asserting that a protected group is inhuman, inferior or worthy of being hated.</li>
+<li>Apps that contain hateful slurs, stereotypes, or theories about a protected group possessing negative characteristics (e.g., malicious, corrupt, evil, etc.), or explicitly or implicitly claims the group is a threat.</li>
+<li>Content or speech trying to encourage others to believe that people should be hated or discriminated against because they are a member of a protected group.</li>
+<li>Content which promotes hate symbols such as flags, symbols, insignias, paraphernalia or behaviors associated with hate groups.</li>
+</ul>
+<h3>Violence</h3>
+<p>We don’t allow the act of users that depict or facilitate gratuitous violence or other dangerous activities.</p>
+<p><strong>Here are some examples of common violations:</strong></p>
+<ul>
+<li>Graphic depictions or descriptions of realistic violence or violent threats to any person or animal.</li>
+<li>Apps that promote self harm, suicide, eating disorders, choking games or other acts where serious injury or death may result.</li>
+</ul>
+<h3>Terrorist Content</h3>
+<p>We don’t allow the act of users with content related to terrorism, such as content that promotes terrorist acts, incites violence, or celebrates terrorist attacks.</p>
+<h3><strong>Dangerous Movements and Organizations</strong></h3>
+<p>We don’t allow the act of users with content related to planning, preparing, or glorifying violence against civilians.</p>
+<h3>Sensitive Events</h3>
+<p>We don’t allow the act of users that lack reasonable sensitivity towards or capitalize on a natural disaster, atrocity, health crisis, conflict, death, or other tragic event.</p>
+<p><strong>Here are examples of common violations:</strong></p>
+<ul>
+<li>Lacking sensitivity regarding the death of a real person or group of people due to suicide, overdose, natural causes, etc.</li>
+<li>Denying a major tragic event.</li>
+<li>Appearing to profit from a tragic event with no discernible benefit to the victims.</li>
+</ul>
+<h3>Bullying and Harassment</h3>
+<p>We don’t allow the act of users that contain or facilitate threats, harassment, or bullying.</p>
+<p><strong>Here are examples of common violations:</strong></p>
+<ul>
+<li>Bullying victims of international or religious conflicts.</li>
+<li>Content that seeks to exploit others, including extortion, blackmail, etc.</li>
+<li>Posting content in order to humiliate someone publicly.</li>
+<li>Harassing victims, or their friends and families, of a tragic event.</li>
+</ul>
+<h3>Dangerous Products</h3>
+<p>We don’t allow the act of users that facilitate the sale of explosives, firearms, ammunition, or certain firearms accessories, via Diwania.</p>
+<ul>
+<li>Restricted accessories include those that enable a firearm to simulate automatic fire or convert a firearm to automatic fire (e.g., bump stocks, gatling triggers, drop-in auto sears, conversion kits), and magazines or belts carrying more than 30 rounds.</li>
+</ul>
+<p>We don’t allow the act of that provide instructions for the manufacture of explosives, firearms, ammunition, restricted firearm accessories, or other weapons. This includes instructions on how to convert a firearm to automatic, or simulated automatic, firing capabilities.</p>
+<h3>Marijuana</h3>
+<p>We don’t allow the act of users that facilitate the sale of marijuana or marijuana products, regardless of legality,via Diwania.</p>
+<h3>Tobacco and Alcohol</h3>
+<p>We don’t allow the act of users that facilitate the sale of tobacco (including e-cigarettes and vape pens) or encourage the illegal or inappropriate use of alcohol or tobacco,via Diwania.</p>
+<h3><strong>Child Endangerment</strong></h3>
+<p>We prohibit users from creating, uploading, or distributing content that facilitates the exploitation or abuse of children. If we become aware of content that sexually exploits, targets, or endangers children, we may report cases to law enforcement and cooperate with them, as appropriate.</p>
+<p>• DO NOT post, share, or send any inappropriate interaction targeted at a child (for example, groping or caressing).</p>
+<p>• DO NOT post, share, or send any sexualization of a minor (for example, imagery that depicts, encourages or promotes the sexual abuse of children or the portrayal of children in a manner that could result in the sexual exploitation of children).</p>
+<p>• Diwania strictly prohibits any sextortion (for example, threatening or blackmailing a child by using real or alleged access to a child&#39;s intimate images).</p>
+<p>• Diwania strictly prohibits any trafficking of a child (for example, advertising or solicitation of a child for commercial sexual exploitation).</p>
+<p>• Diwania strictly prohibits an child grooming (for example, befriending a child online to faciliti either online or offline, sexual contact and/or exchanging sexual imagary wit that child).</p>
+<p>• DO NOT use public posts or private messages to harass underage users.</p>
+<p>• DO NOT use the app if you are under 13, or the minimum age for your country or region if designated differently in the <strong>Privacy Policy</strong> and <strong>User Agreement</strong>.</p>
+
+</div>
+
+<script>
+  /// theme
+const initSawaSDKFn = () => {
+  let called = false
+  return () => {
+    if (called) {
+      return
+    }
+    called = true
+    if (
+      window.JavaBridgeObj &&
+      !window.JavaBridgeObj.__exec__
+    ) {
+      ;window.JavaBridgeObj.__actions__ = {}
+      ;window.JavaBridgeObj.__id__ = 0
+      ;window.JavaBridgeObj.__exec__ = (id, respJSON) => {
+        const handler = window.JavaBridgeObj.__actions__[id]
+        if (handler) {
+          handler(respJSON)
+        }
+      }
+    }
+  }
+}
+const initSawaSDK = initSawaSDKFn()
+
+const registerBridgeCbId = (cb) => {
+  const id = (window.JavaBridgeObj.__id__ += 1)
+  ;window.JavaBridgeObj.__actions__[id] = cb
+  return id
+}
+
+function applyColorTheme(darkMode) {
+  if (darkMode) {
+    document.getElementsByTagName('html')[0].classList.add('-dark')
+  } else {
+    document.getElementsByTagName('html')[0].classList.remove('-dark')
+  }
+}
+
+async function getDarkMode() {
+  let resolver = null
+  const p = new Promise((resolve) => {
+    resolver = resolve
+  })
+
+  if (
+    window.JavaBridgeObj &&
+    window.JavaBridgeObj.isDarkMode
+  ) {
+    const callback_id = registerBridgeCbId(function (res) {
+      // console.warn('isDarkMode', res)
+      if (res) {
+        const { mode } = JSON.parse(res)
+        resolver(mode === 1)
+      }
+    })
+    // console.warn('#1', callback_id)
+    ;window.JavaBridgeObj.isDarkMode(JSON.stringify({ callback_id }))
+  } else {
+    // console.warn('NO API isDarkMode')
+    resolver(false)
+  }
+
+  return p
+}
+
+async function initDarkMode() {
+  // setCallback
+  if (window.JavaBridgeObj) {
+    ;window.JavaBridgeObj.__notifyDarkModeChanged__ = function (
+      res
+    ) {
+      const { mode } = res
+      applyColorTheme(mode === 1)
+    }
+  }
+
+  // setDefaultTheme
+  const isDark = await getDarkMode()
+  applyColorTheme(isDark)
+}
+
+function isIOS () {
+  const u = navigator.userAgent
+  const ua = u.toLowerCase()
+  return /iphone|ipad|ipod/.test(ua)
+}
+
+function getStatusBarHeight() {
+  return new Promise((resolve) => {
+    if (isIOS()) {
+      if (window.JavaBridgeObj) {
+        ;window.JavaBridgeObj.getStatusBarHeightCb = (p) => {
+          resolve((p / window.screen.width) * window.innerWidth)
+        }
+        ;window.JavaBridgeObj.getStatusBarHeight()
+      } else {
+        resolve(0)
+      }
+    } else if (
+      window.JavaBridgeObj &&
+      window.JavaBridgeObj.getStatusBarHeight
+    ) {
+      const ratio = window.devicePixelRatio
+      const h = window.JavaBridgeObj.getStatusBarHeight() / ratio
+      resolve((h / window.screen.width) * window.innerWidth)
+    }
+  })
+}
+
+function fixAppHeader() {
+  document.addEventListener('DOMContentLoaded', function() {
+    const node1 = document.getElementById('appHeader')
+    if (!node1)  return
+    const node2 = node1.getElementsByClassName('left')[0]
+    // fix height
+    getStatusBarHeight()
+      .then(function(res) {
+        node1.style.height = `${44 + res}px`
+        node1.style.paddingTop = `${res}px`
+      })
+    // click event
+    node2.addEventListener('click', function(e) {
+      if (window.JavaBridgeObj) {
+        JavaBridgeObj.closeWebview()
+      }
+    })
+  })
+}
+
+/// main entry
+function __main__() {
+  initSawaSDK()
+  initDarkMode()
+  fixAppHeader()
+}
+__main__()
+
+</script>
+</body>
+
+</html>
