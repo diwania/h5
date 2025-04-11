@@ -1,0 +1,577 @@
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+  <style>
+    :root {
+      --alpha_brand_alpha_10: rgba(114,20,255,0.102);
+      --alpha_brand_alpha_20: rgba(114,20,255,0.200);
+      --alpha_brand_alpha_40: rgba(114,20,255,0.400)	;
+      --alpha_neutral_alpha_10: rgba(0,0,0,0.102)	;
+      --alpha_neutral_alpha_20: rgba(0,0,0,0.200)	;
+      --alpha_neutral_alpha_4: rgba(0,0,0,0.039)	;
+      --base_badge: #FF524D;
+      --base_bg_actionsheet: #FFFFFF;
+      --base_bg_bottom: #FFFFFF;
+      --base_bg_card: #FFFFFF;
+      --base_bg_card_secondary: #F5F7FA;
+      --base_bg_chips: #F5F7FA;
+      --base_bg_chips_selected: rgba(114,20,255,0.149)	;
+      --base_bg_controller: #FFFFFF;
+      --base_bg_default: #FFFFFF;
+      --base_bg_dialog: #FFFFFF;
+      --base_bg_edit: #F5F7FA;
+      --base_bg_head: #8E73FF;
+      --base_bg_label_location: #B8BECC;
+      --base_bg_loading_blackpop: rgba(0,0,0,0.549)	;
+      --base_bg_loading_whitepop: #F5F7FA;
+      --base_bg_navbar: #FFFFFF;
+      --base_bg_navbar_secondary: #FFFFFF;
+      --base_bg_panel: #FFFFFF;
+      --base_bg_pop_black: rgba(0,0,0,0.898);
+      --base_bg_pop_white: #FFFFFF;
+      --base_bg_primary: #F5F7FA;
+      --base_bg_primary_01: #F5F7FA;
+      --base_bg_secondary: #FFFFFF;
+      --base_bg_tabbar: #FFFFFF;
+      --base_bg_tag_01: #E6F6FF;
+      --base_bg_tag_02: #EBEFFF;
+      --base_bg_tag_03: #FEEFEF;
+      --base_bg_tag_04: #E7FAF3;
+      --base_bg_tag_05: #FFF6E8;
+      --base_bg_tag_06: #EAE5FF;
+      --base_bg_tertiary: #F5F7FA;
+      --base_bg_toast: rgba(0,0,0,0.800);
+      --base_bg_toolbar: #FFFFFF;
+      --base_brand: #7214FF;
+      --base_color_01: #0BA7FF;
+      --base_color_02: #4D70FF;
+      --base_color_03: #FF524D;
+      --base_color_04: #0DC37E;
+      --base_color_05: #FA9E00;
+      --base_gender_female: #F996E6;
+      --base_gender_male: #9EC9FD;
+      --base_gender_none: #D2D8E5;
+      --base_line_default: rgba(0, 0, 0, 0.039);
+      --base_line_divider: rgba(0, 0, 0, 0.039);
+      --base_load: rgba(0, 0, 0, 0.039);
+      --base_mask_default: rgba(0,0,0,0.400);
+      --base_press: rgba(0, 0, 0, 0.039);
+      --button_t_btn_dis: #D2D8E5;
+      --button_t_btn_primary_filled: #FFFFFF;
+      --button_t_btn_secondary_filled: #FFFFFF;
+      --button_t_btn_tertiary_filled: #7214FF;
+      --button_primary_filled_dis: #EAE5FF;
+      --button_primary_filled_dis_02: #F5F7FA;
+      --button_primary_filled_nor: #7214FF;
+      --button_primary_stroke_dis: rgba(0, 0, 0, 0.039);
+      --button_primary_stroke_nor: rgba(114,20,255,0.302);
+      --button_secondary_filled_dis: #EAE5FF;
+      --button_secondary_filled_nor: #7214FF;
+      --button_secondary_stroke_nor: rgba(0, 0, 0, 0.039);
+      --button_tertiary_filled_nor: rgba(114,20,255,0.102);
+      --button_tertiary_filled_nor_02: rgba(114,20,255,0.102);
+      --button_white_filled_nor_01: #FFFFFF;
+      --button_white_filled_nor_02: #FFFFFF;
+      --button_white_filled_nor_03: #FFFFFF;
+      --im_bg_chat: #F5F7FA;
+      --im_bg_general_notice: #E9ECF2;
+      --im_bg_notice: #EBEFFF;
+      --im_bg_textfield: #F5F7FA;
+      --im_bg_warning: #FEEFEF;
+      --im_chat_bg_receive: #FFFFFF;
+      --im_chat_bg_send: #33A17FFF;
+      --im_noble_chat_bg_noble_01: #F9FFFA;
+      --im_noble_chat_bg_noble_02: #F9FCFF;
+      --im_noble_chat_bg_noble_03: #FBF9FF;
+      --im_noble_chat_bg_noble_04: #FFF9FE;
+      --im_noble_chat_bg_noble_05: #FFF9F9;
+      --im_noble_chat_bg_noble_06: #FFFFF9;
+      --im_noble_text_noble_01: #3F6B51;
+      --im_noble_text_noble_01_caption: #9CB5A6;
+      --im_noble_text_noble_01_highlight: #00BA3F;
+      --im_noble_text_noble_02: #355467;
+      --im_noble_text_noble_02_caption: #97A8B3;
+      --im_noble_text_noble_02_highlight: #008BF0;
+      --im_noble_text_noble_03: #56438B;
+      --im_noble_text_noble_03_caption: #A89EC5;
+      --im_noble_text_noble_03_highlight: #883FFF;
+      --im_noble_text_noble_04: #871F83;
+      --im_noble_text_noble_04_caption: #C38CC0;
+      --im_noble_text_noble_04_highlight: #F200E9;
+      --im_noble_text_noble_05: #711717;
+      --im_noble_text_noble_05_caption: #B88888;
+      --im_noble_text_noble_05_highlight: #FF3400;
+      --im_noble_text_noble_06: #714D17;
+      --im_noble_text_noble_06_caption: #B8A688;
+      --im_noble_text_noble_06_highlight: #FF8A00;
+      --im_progress_receive_normal: rgba(114,20,255,0.200);
+      --im_progress_receive_success: #7214FF;
+      --im_progress_send_normal: rgba(114,20,255,0.200);
+      --im_progress_send_success: #7214FF;
+      --im_text_input_default: #9DA4B2;
+      --im_text_notice: #525866;
+      --im_text_receive: #272A33;
+      --im_text_send: #272A33;
+      --other_t_profile_charm: #C73EAC;
+      --other_t_profile_contribution: #D46402;
+      --other_t_profile_fans: #4652D2;
+      --other_t_profile_operate: #9DA4B2;
+      --other_bg_decoration_selected: #9980FF;
+      --other_bg_gift: rgba(255,128,178,0.200);
+      --other_color_roomteam: #00D5FF;
+      --other_giftwall_t_giftwall_lv_0: #565B74;
+      --other_giftwall_t_giftwall_lv_1: #008BAA;
+      --other_giftwall_t_giftwall_lv_2: #3A7EE3;
+      --other_giftwall_t_giftwall_lv_3: #6536C9;
+      --other_giftwall_t_giftwall_lv_4: #C41BFF;
+      --text_t_0: #000000;
+      --text_t_100: #FFFFFF;
+      --text_t_20: #272A33;
+      --text_t_40: #525866;
+      --text_t_55: #767D8C;
+      --text_t_70: #9DA4B2;
+      --text_t_90: #D2D8E5;
+      --text_t_connect: #0DC37E;
+      --text_t_disable: #D2D8E5;
+      --text_t_error: #FF524D;
+      --text_t_family_primary: #38260A;
+      --text_t_family_secondary: #99826F;
+      --text_t_highlight: #FA9E00;
+      --text_t_inroom: #9980FF;
+      --text_t_link: #7214FF;
+      --text_t_navbar: #272A33;
+      --text_t_primary: #7214FF;
+      --text_t_secondary: #7214FF;
+      --base_bg_bottom_0: rgba(255,255,255,0.000);
+      --base_bg_default_0: rgba(255,255,255,0.000);
+      --base_bg_primary_0: rgba(245,247,250,0.000);
+      --text_t_70_20: rgba(157,164,178,0.200);
+    }
+    :root.-dark{
+      --alpha_brand_alpha_10: rgba(143,113,245,0.102);
+      --alpha_brand_alpha_20: rgba(143,113,245,0.200);
+      --alpha_brand_alpha_40: rgba(143,113,245,0.400);
+      --alpha_neutral_alpha_10: rgba(255,255,255,0.102);
+      --alpha_neutral_alpha_20: rgba(255,255,255,0.200);
+      --alpha_neutral_alpha_4: rgba(255,255,255,0.078);
+      --base_badge: #E05A55;
+      --base_bg_actionsheet: #1E2021;
+      --base_bg_bottom: #121314;
+      --base_bg_card: #1E2021;
+      --base_bg_card_secondary: #292C2E;
+      --base_bg_chips: rgba(219,237,255,0.078);
+      --base_bg_chips_selected: rgba(124,98,209,0.302);
+      --base_bg_controller: #292C2E;
+      --base_bg_default: #121314;
+      --base_bg_dialog: #35383B;
+      --base_bg_edit: #292C2E;
+      --base_bg_head: #463380;
+      --base_bg_label_location: #7A7F85;
+      --base_bg_loading_blackpop: rgba(0,0,0,0.549);
+      --base_bg_loading_whitepop: #292C2E;
+      --base_bg_navbar: #1E2021;
+      --base_bg_navbar_secondary: #121314;
+      --base_bg_panel: #1E2021;
+      --base_bg_pop_black: #5E6266;
+      --base_bg_pop_white: #5E6266;
+      --base_bg_primary: #121314;
+      --base_bg_primary_01: #121314;
+      --base_bg_secondary: #1E2021;
+      --base_bg_tabbar: #292C2E;
+      --base_bg_tag_01: #283F4D;
+      --base_bg_tag_02: #2B3457;
+      --base_bg_tag_03: #4D302F;
+      --base_bg_tag_04: #284238;
+      --base_bg_tag_05: #4D3E29;
+      --base_bg_tag_06: #352B57;
+      --base_bg_tertiary: #292C2E;
+      --base_bg_toast: rgba(94,98,102,0.800);
+      --base_bg_toolbar: #1E2021;
+      --base_brand: #8F71F5;
+      --base_color_01: #2B9AD9;
+      --base_color_02: #5571E0;
+      --base_color_03: #E05A55;
+      --base_color_04: #21A673;
+      --base_color_05: #D99E45;
+      --base_gender_female: #C27CB4;
+      --base_gender_male: #7B9DC7;
+      --base_gender_none: #5E6266;
+      --base_line_default: rgba(255,255,255,0.039);
+      --base_line_divider: rgba(0,0,0,0.200);
+      --base_load: rgba(255,255,255,0.059);
+      --base_mask_default: rgba(0,0,0,0.600);
+      --base_press: rgba(255,255,255,0.059);
+      --button_t_btn_dis: #5E6266;
+      --button_t_btn_primary_filled: #FFFFFF;
+      --button_t_btn_secondary_filled: #FFFFFF;
+      --button_t_btn_tertiary_filled: #8F71F5;
+      --button_primary_filled_dis: #3E3952;
+      --button_primary_filled_dis_02: #292C2E;
+      --button_primary_filled_nor: #7C62D1;
+      --button_primary_stroke_dis: rgba(255,255,255,0.102);
+      --button_primary_stroke_nor: rgba(146,115,250,0.302);
+      --button_secondary_filled_dis: #3E3952;
+      --button_secondary_filled_nor: #8F71F5;
+      --button_secondary_stroke_nor: rgba(255,255,255,0.102);
+      --button_tertiary_filled_nor: rgba(124,98,209,0.200);
+      --button_tertiary_filled_nor_02: rgba(124,98,209,0.200);
+      --button_white_filled_nor_01: #3E3952;
+      --button_white_filled_nor_02: rgba(255,255,255,0.800);
+      --button_white_filled_nor_03: rgba(255,255,255,0.102);
+      --im_bg_chat: #121314;
+      --im_bg_general_notice: #1E2021;
+      --im_bg_notice: #2B3457;
+      --im_bg_textfield: #292C2E;
+      --im_bg_warning: #4D302F;
+      --im_chat_bg_receive: #292C2E;
+      --im_chat_bg_send: #33A17FFF;
+      --im_noble_chat_bg_noble_01: #161A17;
+      --im_noble_chat_bg_noble_02: #16181A;
+      --im_noble_chat_bg_noble_03: #17161A;
+      --im_noble_chat_bg_noble_04: #1A1619;
+      --im_noble_chat_bg_noble_05: #1A1616;
+      --im_noble_chat_bg_noble_06: #1A1816;
+      --im_noble_text_noble_01: #99BDA7;
+      --im_noble_text_noble_01_caption: #657B6D;
+      --im_noble_text_noble_01_highlight: #6BD897;
+      --im_noble_text_noble_02: #97B5C7;
+      --im_noble_text_noble_02_caption: #637681;
+      --im_noble_text_noble_02_highlight: #50B2EF;
+      --im_noble_text_noble_03: #B3A8D2;
+      --im_noble_text_noble_03_caption: #756E88;
+      --im_noble_text_noble_03_highlight: #B689FF;
+      --im_noble_text_noble_04: #C4A2C3;
+      --im_noble_text_noble_04_caption: #806A7F;
+      --im_noble_text_noble_04_highlight: #F271EE;
+      --im_noble_text_noble_05: #D4A5A5;
+      --im_noble_text_noble_05_caption: #896C6C;
+      --im_noble_text_noble_05_highlight: #F97A7A;
+      --im_noble_text_noble_06: #D8BE97;
+      --im_noble_text_noble_06_caption: #8C7C63;
+      --im_noble_text_noble_06_highlight: #F4B14D;
+      --im_progress_receive_normal: rgba(143,113,245,0.200);
+      --im_progress_receive_success: #8F71F5;
+      --im_progress_send_normal: rgba(143,113,245,0.200);
+      --im_progress_send_success: #8F71F5;
+      --im_text_input_default: #7A7F85;
+      --im_text_notice: #BABEC2;
+      --im_text_receive: #DCDEE0;
+      --im_text_send: #DCDEE0;
+      --other_t_profile_charm: #FFB2EF;
+      --other_t_profile_contribution: #FFDD99;
+      --other_t_profile_fans: #B2C8FF;
+      --other_t_profile_operate: #7A7F85;
+      --other_bg_decoration_selected: #6551A8;
+      --other_bg_gift: rgba(143,113,245,0.102);
+      --other_color_roomteam: #04AFC2;
+      --other_giftwall_t_giftwall_lv_0: #DCDEE0;
+      --other_giftwall_t_giftwall_lv_1: #62CAD5;
+      --other_giftwall_t_giftwall_lv_2: #70A0E7;
+      --other_giftwall_t_giftwall_lv_3: #A479FF;
+      --other_giftwall_t_giftwall_lv_4: #C41BFF;
+      --text_t_0: #FFFFFF;
+      --text_t_100: #FFFFFF;
+      --text_t_20: #DCDEE0;
+      --text_t_40: #BABEC2;
+      --text_t_55: #999EA3;
+      --text_t_70: #7A7F85;
+      --text_t_90: #5E6266;
+      --text_t_connect: #21A673;
+      --text_t_disable: #5E6266;
+      --text_t_error: #E05A55;
+      --text_t_family_primary: #B29D7D;
+      --text_t_family_secondary: #8F7E64;
+      --text_t_highlight: #D99E45;
+      --text_t_inroom: #8F71F5;
+      --text_t_link: #8F71F5;
+      --text_t_navbar: #DCDEE0;
+      --text_t_primary: #8F71F5;
+      --text_t_secondary: #8F71F5;
+      --base_bg_bottom_0: rgba(18,19,20,0.000);
+      --base_bg_default_0: rgba(18,19,20,0.000);
+      --base_bg_primary_0: rgba(18,19,20,0.000);
+      --text_t_70_20: rgba(122,127,133,0.200);
+    }
+  </style>
+  <style>
+    body {background-color: var(--base_bg_default);}
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    ul, ol, li,
+    p {color: var(--text_t_20);}
+    h2::after {border-color: var(--text_t_90);}
+    a {color: var(--text_t_link);}
+    li::marker{color: var(--text_t_20);}
+  </style>
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html">
+<h1>Term of Service-Diwania</h1>
+<h4><strong>Date of Last Revision: 5th March ,2025</strong></h4>
+<ol>
+<li><strong>CONSENT AND ACCEPTANCE</strong></li>
+</ol>
+<p>1.1 WaveRise Games Limited has developed an app named Diwania (hereinafter to as “Diwania”) . To use Diwania , the user (hereinafter referred to as “User” or “You”) shall agree to the provisions of this Agreement in its entirely and complete the registration process as indicated on the page. By clicking on “Sign Up” during the the registration process, the User wholly agrees to all terms of this Agreement and acknowledges that Diwania  reserves its right to amend or add to this Agreement any terms of use that Diwania deems reasonable.</p>
+<p>1.2 The User hereby declares that, (i) Our services are not for users below age 18. If you are under the age of 18, please do not register an account on Diwania and use the services of Diwania; (ii) The information that the User provides in the registration process is correct, true, up to date and accurate.</p>
+<p>1.3 Except as stipulated otherwise in this Agreement, the Agreement does not provide for the terms of service relating to the use of other applications or other services of Diwania. The User shall enter into a relevant user agreement if he/she intends to use such an app or service.</p>
+<p>1.4 In the Agreement, the User and Diwania shall be jointly referred to as the “Parties” and any one of them as a “Party”.</p>
+<ol>
+<li><strong>TERMS AND CONDITIONS</strong></li>
+</ol>
+<p>2.1 By entering the Agreement, Diwania does not endorse any content produced by any user or other licensor via Diwania, or any opinion, recommendation, or advice expressed therein, and Diwania expressly disclaims any and all liability in connection with such content.</p>
+<p>2.2 For you to enjoy any and all functions provided by the app Diwania (hereinafter referred to as “the Service”) for free, including free access to and use of the Service, you acknowledge and agree that Diwania may generate revenues, increase goodwill or otherwise increase the value of Diwania from your use of the Service.</p>
+<p>2.3 To its best knowledge, Diwania operates Diwania in compliance with applicable laws and/or regulation in jurisdictions where Diwania is allowed to operate. Diwania makes no representation that Diwania’s user-generated contents or practices would be legal in every jurisdiction. It’s your responsibility to check and see whether Diwania’s operation is prohibited or not in your country of residence.</p>
+<p>2.4 You shall ensure that you are civilly capable of accepting the service and not underage based on applicable laws, which constitutes a minor in your resident country. If you are a minor, you are required to acquire permission from your legal guardian to use our app in your resident country. You are solely responsible for any negative outcome derived from your violation to such mandatory requirement.</p>
+<p>2.5 You shall not reproduce, distribute, publicly perform, communicate to the public, synchronize or otherwise use and exploit any third party content, including but not limited to, pictures or messages you upload to the app. You are solely responsible for securing the rights or license to any third party content, including but not limited to, pictures or messages you upload and share on Diwania or other social medial platforms.</p>
+<p>2.6 You hereby agree not to use Diwania to conduct any activities that are against religious principles, public policies or any applicable laws. You shall not use Diwania to conduct any activities that are in relation with terrorism, pornography, religious extremism, drugs traffic or other illegal activities. You are solely responsible for any negative outcome derived from your violation to such mandatory requirement.</p>
+<p>2.7 You agree not to use the Service for any of the following commercial uses unless you obtain Diwania’s prior written approval: the sale of access to the Service; the sale of advertising, sponsorships, or promotions placed on or within the Service or Content;</p>
+<p>2.8 You agree not to use or launch any automated system, including but not limited to, “robots,” “spiders,” or “offline readers,” that accesses the Service in a manner that sends more request messages to Diwania servers in a given period of time than a human can reasonably produce in the same period by using a conventional online web browser.</p>
+<p>2.9 You agree not to circumvent, disable or otherwise interfere with security-related features of the Service or features that prevent or restrict use or enforce limitations on use of the Service or the content therein.</p>
+<p>2.10  By accessing or using our features related to third-party API services within our products, you agree to be bound by this User Agreement and the policies of third parties.If you do not agree to these terms, please do not use these features.</p>
+<p>2.11 If you select a username or similar identifier for your account, we reserve the right to remove or reclaim it if we believe it is appropriate (such as when a trademark owner complains about a username that does not closely relate to a user’s actual name).</p>
+<p>2.12 Diwania may in any event terminate this Agreement by sending a termination email to the User.</p>
+<ol>
+<li><strong>DIWANIA ACCOUNTS</strong></li>
+</ol>
+<p>3.1 Without our prior written approval, you cannot transfer the account to any other third party.</p>
+<p>3.2 You will not create an account for anyone other than yourself without permission and you will not create more than one personal account. And if Diwania disabled your account, you will not create another one without our permission.</p>
+<p>3.3 Although Diwania will not be liable for your losses caused by any unauthorized use of your account, you may be liable for the losses of Diwania or others due to such unauthorized use.</p>
+<p>3.4 Diwania may disable your account if Diwania reasonably believes that you use this account to carry out any illegal activities.</p>
+<p>3.5 Diwania values your privacy and agree not to disclose or provide to a third party with your registered information or any non-public content, which may be collected when you use our service unless we get your prior approval or we are requested to disclose by a competent authority under applicable laws or regulations.</p>
+<p>3.6 Notwithstanding the foregoing, Diwania may disclose your registered information to our affiliated companies for data analysis from commercial perspective or disclose your registered information to our partner if such partner agrees to protect the information in the way Diwania does.</p>
+<p>3.7 Diwania may use your information in the app for the rankings and may exhibit them for others to see.</p>
+<p>3.8 Diwania may exhibit the photos you choose to upload from Instagram in your personal profile of Diwania and You can cancel the uploading and exhibiting anytime.</p>
+<p>3.9 When you register our app, you agree that we can send you our updates and promotional messages. If you don’t want to receive them anymore, you can send us email to <a href="http://contact@waverises.online">contact@waverises.online</a>.</p>
+<p>3.10 If you purchase a product or service from us, we and/or our third-party payment processors may also collect your payment information.</p>
+<p>3.11 Information obtained from third parties. You may give us permission to collect your information from services provided by third parties. For example, you may connect a social networking service (“SNS”) such as Facebook to your account opened with us. When you do this, it allows us to obtain information from those accounts (for example, your friends or contacts).</p>
+<p>3.12 YouTube API Services. Our products utilize YouTube API Services. By using these services, you agree to be bound by the <a href="%22https://www.youtube.com/t/terms%22">&quot;https://www.youtube.com/t/terms&quot;</a>YouTube Terms of Service and the<a href="http://www.google.com/policies/privacy%22">http://www.google.com/policies/privacy&quot;</a>Google Privacy Policy.</p>
+<p>3.13 Payment Information. Making an in-app purchase may require you to share personal identification information with us. In this case, we do not actively collect any of your payment information, and we do not send or share the information to any third party. If any private information is shared through Google Play during purchases, it is stored and secured by Google. We only receive the payment information that Google share to us, which we store as a record of the transaction on our end, and only use for optimize our product experience.</p>
+<p>3.14 If users violate laws, regulations and platform rules, after receiving the report, the platform may submit some voice records and/or text messages as the basis for content audit and investigation.</p>
+<ol>
+<li><strong>INTELLECTUAL PROPERTY</strong></li>
+</ol>
+<p>4.1 All text, data, images, graphics, audio and/or video information and other materials produced when using our app or service are property of Diwania and are protected by copyright, trademark and/or other property rights laws. Nothing in this Agreement shall be construed as conferring you any license of any intellectual property rights or such materials.</p>
+<p>4.2 You are prohibited from copying, displaying, downloading, modifying, reproducing or creating any derivative works of such materials, directly or indirectly published, performed, rewritten or republished for performance or distribution purposes, or otherwise used for commercial purposes without prior written consent from us.</p>
+<p>4.3 Diwania shall not be liable for any loss or damage incurred by you when using Diwania or service or incurred by systematic problem.</p>
+<p>4.4 Any intellectual property rights of any software, works (including but not limited to, any images, photos, animations, video recordings, audio recordings, music, text, add-on programs and supplementary material) belonging to any third party shall not be infringed. You cannot reverse engineer, decompile or disassemble such software or works without the prior permission of the copyright holder.</p>
+<p>4.5 The content on your recorded short videos on Diwania, and the trademarks, service marks and logos (hereinafter referred to as “Marks”) in the videos, are owned by or licensed to Diwania, subject to applicable copyright law and other intellectual property law.</p>
+<p>4.6 You hereby grant Diwania a worldwide, non-exclusive, royalty-free, sublicense able and transferable license to use, reproduce, distribute, prepare derivative works of, display, publish, adapt, make available online or electronically transmit and perform the videos in connection with the Service, which is perpetual and irrevocable.</p>
+<p>4.7 Ownership: Platform Materials. All rights, title and interest in and to all materials that are part of the Services (including, but not limited to, designs, text, graphics, pictures, video, information, applications, software, music, sound and other files, and their selection and arrangement) with the exception of UGC (collectively, the “Platform Materials”), are, as between the Company and you, owned by the Company and/or its third party licensors. You acknowledge and agree that you shall not acquire any ownership rights whatsoever by downloading the Platform Materials or by purchasing any Virtual Currency or Virtual Items. You agree that you shall not modify, copy, distribute, frame, reproduce, republish, download, scrape, display, post, transmit, or sell in any form or by any means, in whole or in part, or otherwise exploit the Platform Materials without our express prior written permission. You acknowledge that you do not acquire any ownership rights by using the Services or by accessing any Platform Materials posted on the Services by the Company, or any derivative works thereof. All rights not expressly granted by this Agreement are reserved by the Company and its licensors, and no license is granted hereunder by estoppel, implication or otherwise; UGC. You represent and warrant that your UGC is original to you and that you exclusively own the rights to such content, including the right to grant all of the rights and licenses in this Agreement without the Company incurring any third party obligations or liability arising out of its exercise of such rights and licenses. All of your UGC is your sole responsibility and the Company is not responsible for any material that you (and other users) upload, post, or otherwise make available. By uploading, distributing, transmitting or otherwise using your UGC with the Services, you grant to us a perpetual, nonexclusive, transferable, royalty-free, sub-licensable, and worldwide license to use, host, reproduce, modify, adapt, publish, translate, create derivative works from, distribute, perform, and display your UGC in connection with operating, providing and promoting the Services. The Company does not guarantee the accuracy, quality, or integrity of any UGC appeared on the Services. By using the Services you acknowledge and accept that you may be exposed to material you find offensive or objectionable. You agree that the Company will not under any circumstances be liable for any UGC, including, but not limited to, errors in any UGC, or any loss or damage incurred by use of such UGC. The Company reserves the right to remove and permanently delete your UGC from the Services with or without notice for any reason or no reason. You may notify the Company of any UGC that you believe violates this Agreement, or other inappropriate user behavior, by reporting to our customer service.</p>
+<p>4.8 Copyright Complaints.Notification.If you believe that your work has been copied in a way that constitutes copyright infringement, you should notify us of your infringement claim in accordance with the procedure set forth below. The Company will process and investigate notices of alleged infringement and will take appropriate actions under applicable intellectual property laws with respect to any alleged or actual infringement. A notification of claimed copyright infringement should be emailed to our email address at <a href="http://contact@waverises.online">contact@waverises.online</a>. To be effective, the notification must be in writing, in either the English or Arabic language, and contain the following information:</p>
+<p>4.8.1 an electronic or physical signature of the person authorized to act on behalf of the owner of the copyright;</p>
+<p>4.8.2 a description of the copyrighted work that you claim has been infringed;</p>
+<p>4.8.3 a description of where the material that you claim is infringing is located on the Services, with enough detail that we may find it efficiently;</p>
+<p>4.8.4 your address, telephone number, and email address;</p>
+<p>4.8.5 a statement by you that you have a good faith belief that the disputed use is not authorized by the copyright or intellectual property owner, its agent, or the law;</p>
+<p>4.8.6 a statement by you, made under penalty of perjury, that the above information in your notification is accurate and that you are the copyright owner or authorized to act on the copyright owner’s behalf.</p>
+<p>4.9 Counter-Notification: If you believe that your UGC that was removed (or to which access was disabled) is not infringing, or that you have the authorization from the copyright owner, the copyright owner’s agent, or pursuant to the law, to upload and use the content in your UGC, you may send a written counter-notification containing the following information to our email address:</p>
+<p>4.9.1 your physical or electronic signature;</p>
+<p>4.9.2 identification of the content that has been removed or to which access has been disabled and the location at which the content appeared before it was removed or disabled;</p>
+<p>4.9.3 a statement that you have a good faith belief that the content was removed or disabled as a result of mistake or a misidentification of the content;</p>
+<p>4.9.4 your name, address, telephone number, and email address, a statement that you consent to the jurisdiction of the laws of Hong Kong, Special Administrative Region of China (“Hong Kong”), and a statement that you will accept service of process from the person who provided notification of the alleged infringement.</p>
+<ol>
+<li><strong>LIMITATION OF LIABILITY AND INDEMNITY</strong></li>
+</ol>
+<p>To the fullest extent permitted by law, in no event shall Diwania, its officers, directors, employees, or agents, be liable to you for any direct, indirect, incidental, special, punitive, losses or expenses or consequential damages whatsoever resulting from any of the following,</p>
+<p>i errors, mistakes, or inaccuracies of what you produce on Diwania or other social media,</p>
+<p>ii personal injury or property damage, of any nature whatsoever, resulting from your access to and use of our services,</p>
+<p>iii any unauthorized access to or use of our secure servers and/or any and all personal information and/or financial information stored therein,</p>
+<p>iv any interruption or cessation of transmission to or from our services,</p>
+<p>v any bugs, viruses, trojan horses, or the Diwania, which may be transmitted to or through our services by any third party, and/or</p>
+<p>vi any errors or omissions in any content or for any loss or damage of any kind incurred as a result of your use of any content posted, emailed, transmitted, or otherwise made available via the services, whether based on warranty, contract, tort, or any other legal theory, and whether or not Diwania is advised of the possibility of such damages.</p>
+<p>To the extent permitted by applicable law, you agree to defend, indemnify and hold harmless towards Diwania, its parent corporation, subsidiaries, officers, directors, employees and agents, from and against any and all claims, damages, obligations, losses, liabilities, costs or debt, and expenses (including but not limited to attorney’s fees) arising from:</p>
+<p>i your use of and access to use any and all functions provided by Diwania;</p>
+<p>ii your violation of any term of the Agreement;</p>
+<p>iii your violation of any third party right, including without limitation any copyright, property, or privacy right; or</p>
+<p>iv any claim that your videos caused damage to a third party. This defense and indemnification obligation will survive the Agreement and your use of the Service.</p>
+<ol>
+<li><strong>VIRTUAL CURRENCIES AND VIRTUAL ITEMS</strong></li>
+</ol>
+<p>6.1 The Services may include an opportunity to top-up, subscribe, purchase and/or obtain virtual currency (“Virtual Currency”) and/or virtual items (“Virtual Items”) that may require you to pay a fee using legal tender (that is, “real world currency”) to obtain the Virtual Currency or Virtual Items.</p>
+<p>6.2 Virtual Currency and Virtual Items such as diamonds, and props that you purchase in our Service will be stored in your account. If you use another account or lose this account, your items will not be transferred. It should also be noted that the purchase of these features and in-game currency last only for the duration of the Service. You understand that you do not own Virtual Currency and Virtual Items, but acquire a limited license to use Virtual Currency and Virtual Items according to the specific Service.</p>
+<p>6.3 The Company retains the right to modify, manage, control and/or eliminate Virtual Currency and/or Virtual Items at its sole discretion. Prices and availability of Virtual Items are subject to change without notice. We shall have no liability to you or any third party for the exercise of such rights. You shall have a limited, personal, non-transferable, non-sublicensable permission to use solely within the Services Virtual Items and Virtual Currency that you have earned, purchased or otherwise obtained in a manner authorized by the Company. You have no other right, title or interest in or to any such Virtual Items or Virtual Currency appearing or originating in the Services.</p>
+<p>6.4 If you find there is a wrong charge, please contact us and we will do our best to help you.</p>
+<p>6.5 Due to the different international exchange rate of different currencies, the exchange rate of our Service is based on the rules of Google Play Store. The final settlement price is subject to the price displayed at the time of settlement. We do not charge any additional fees in settlement.</p>
+<p>6.6  You may not:</p>
+<ul>
+<li><strong>use Diwania to encourage or promote online gambling or other financial schemes.</strong> </li>
+<li><strong>pretend to be Diwania officials to trick users into making a fake recharge, etc.</strong> </li>
+<li><strong>use bug to implement behaviors that benefit, damage the product environment, or adversely affect other users.</strong> </li>
+<li><strong>conduct account, virtual currency, or gift transactions with others without authorization.</strong> </li>
+<li><strong>engage in cash transactions (or transactions equivalent to cash value) involving gifts and virtual currency through the Diwania platform, including but not limited to converting decorative gifts into virtual currency. All gifts may only circulate within the Diwania platform.</strong></li>
+</ul>
+<ol>
+<li><strong>Non-Refundable Policy</strong></li>
+</ol>
+<p><strong>7.1 You can subscribe to our Service, and make a payment for the subscription, thus is not refundable, exchangeable or transferable, and can be unsubscribed from the subscription management page of your Google Play Store.</strong> </p>
+<p><strong>7.2 Your purchase of Virtual Currency and Virtual Items is final (that is, the consumption of the “real world currency”) and thus is not refundable, exchangeable or transferable, except in the Company’s or the payment gateway service provider’s sole discretion. You shall not purchase, sell, or exchange Virtual Currency and Virtual Items outside the Services. Doing so is a violation of the Terms and may result in consequences including but not limited to confiscation of your Virtual Currency and Virtual Items, termination of your Account with the Services and/or further legal action.</strong> </p>
+<ol>
+<li><strong>MISCELLANEOUS</strong></li>
+</ol>
+<p>8.1 You agree that: (i) the Service shall be deemed solely based in HongKong, China; and (ii) the Service shall be deemed a passive website that does not give rise to personal jurisdiction over Diwania, either specific or general, in jurisdictions other than HongKong, China.</p>
+<p>8.2 You agree that the laws of Hongkong, China, excluding choice of law rules, will apply to the Agreement.</p>
+<p>8.3 For any dispute arising out of or related to the Service, the Parties agree that such dispute shall be submitted to Hongkong International Arbitration Center in accordance with its arbitration rules in force at the time of applying for arbitration.</p>
+<p>8.4 Unenforceability of some terms of the Agreement shall not affect validity of any other terms in the Agreement. No waiver of any term of the Agreement shall be deemed a further or continuing waiver of such term or any other term, and Diwania’s failure to assert any right or provision under the Agreement shall not constitute a waiver of such right or provision.</p>
+<p>8.5 YouTube Terms of Service<a href="%22https://www.youtube.com/t/terms%22">&quot;https://www.youtube.com/t/terms&quot;</a> and the Google Privacy Policy<a href="%22http://www.google.com/policies/privacy%22">&quot;http://www.google.com/policies/privacy&quot;</a> are incorporated into this Agreement by reference, and your acceptance of this Agreement signifies your acceptance of the aforementioned policies with equal legal effect.</p>
+<p>8.6 You agree to be bound further by Diwania’s privacy policy , incorporated herein in this Agreement by reference. If you do not agree with the Agreement, please stop your browsing of our website, your installing of our APP and delete the application from your device if you have already downloaded it.</p>
+<p>8.7 This agreement may appear in different languages and the English version shall prevail if any content of any other version in any other language conflicts with the equivalent part of this English version.</p>
+<p><a href="https://isawa.badambiz.com/html/docs/diwania/Annex_I_Inappropriate_Content.html">Annex I：Inappropriate Content</a></p>
+
+</div>
+
+<script>
+  /// theme
+const initSawaSDKFn = () => {
+  let called = false
+  return () => {
+    if (called) {
+      return
+    }
+    called = true
+    if (
+      window.JavaBridgeObj &&
+      !window.JavaBridgeObj.__exec__
+    ) {
+      ;window.JavaBridgeObj.__actions__ = {}
+      ;window.JavaBridgeObj.__id__ = 0
+      ;window.JavaBridgeObj.__exec__ = (id, respJSON) => {
+        const handler = window.JavaBridgeObj.__actions__[id]
+        if (handler) {
+          handler(respJSON)
+        }
+      }
+    }
+  }
+}
+const initSawaSDK = initSawaSDKFn()
+
+const registerBridgeCbId = (cb) => {
+  const id = (window.JavaBridgeObj.__id__ += 1)
+  ;window.JavaBridgeObj.__actions__[id] = cb
+  return id
+}
+
+function applyColorTheme(darkMode) {
+  if (darkMode) {
+    document.getElementsByTagName('html')[0].classList.add('-dark')
+  } else {
+    document.getElementsByTagName('html')[0].classList.remove('-dark')
+  }
+}
+
+async function getDarkMode() {
+  let resolver = null
+  const p = new Promise((resolve) => {
+    resolver = resolve
+  })
+
+  if (
+    window.JavaBridgeObj &&
+    window.JavaBridgeObj.isDarkMode
+  ) {
+    const callback_id = registerBridgeCbId(function (res) {
+      // console.warn('isDarkMode', res)
+      if (res) {
+        const { mode } = JSON.parse(res)
+        resolver(mode === 1)
+      }
+    })
+    // console.warn('#1', callback_id)
+    ;window.JavaBridgeObj.isDarkMode(JSON.stringify({ callback_id }))
+  } else {
+    // console.warn('NO API isDarkMode')
+    resolver(false)
+  }
+
+  return p
+}
+
+async function initDarkMode() {
+  // setCallback
+  if (window.JavaBridgeObj) {
+    ;window.JavaBridgeObj.__notifyDarkModeChanged__ = function (
+      res
+    ) {
+      const { mode } = res
+      applyColorTheme(mode === 1)
+    }
+  }
+
+  // setDefaultTheme
+  const isDark = await getDarkMode()
+  applyColorTheme(isDark)
+}
+
+function isIOS () {
+  const u = navigator.userAgent
+  const ua = u.toLowerCase()
+  return /iphone|ipad|ipod/.test(ua)
+}
+
+function getStatusBarHeight() {
+  return new Promise((resolve) => {
+    if (isIOS()) {
+      if (window.JavaBridgeObj) {
+        ;window.JavaBridgeObj.getStatusBarHeightCb = (p) => {
+          resolve((p / window.screen.width) * window.innerWidth)
+        }
+        ;window.JavaBridgeObj.getStatusBarHeight()
+      } else {
+        resolve(0)
+      }
+    } else if (
+      window.JavaBridgeObj &&
+      window.JavaBridgeObj.getStatusBarHeight
+    ) {
+      const ratio = window.devicePixelRatio
+      const h = window.JavaBridgeObj.getStatusBarHeight() / ratio
+      resolve((h / window.screen.width) * window.innerWidth)
+    }
+  })
+}
+
+function fixAppHeader() {
+  document.addEventListener('DOMContentLoaded', function() {
+    const node1 = document.getElementById('appHeader')
+    if (!node1)  return
+    const node2 = node1.getElementsByClassName('left')[0]
+    // fix height
+    getStatusBarHeight()
+      .then(function(res) {
+        node1.style.height = `${44 + res}px`
+        node1.style.paddingTop = `${res}px`
+      })
+    // click event
+    node2.addEventListener('click', function(e) {
+      if (window.JavaBridgeObj) {
+        JavaBridgeObj.closeWebview()
+      }
+    })
+  })
+}
+
+/// main entry
+function __main__() {
+  initSawaSDK()
+  initDarkMode()
+  fixAppHeader()
+}
+__main__()
+
+</script>
+</body>
+
+</html>
